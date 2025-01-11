@@ -93,11 +93,3 @@ print("Dataset downloaded and extracted successfully.")
 ├── Dimensionality Reduction.ipynb   # Main project notebook
 ├── data/                            # Folder for datasets (if downloaded locally)
 ```
-
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Acknowledgements
-- Inspiration from [Scikit-learn Documentation](https://scikit-learn.org/).
-- References to research papers and tutorials on dimensionality reduction techniques.
