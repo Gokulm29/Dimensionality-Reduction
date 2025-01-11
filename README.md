@@ -66,12 +66,19 @@ Make sure you have a Google account and access to Google Colab. Install the requ
 
 ### Dataset
 
-This project uses a dataset that should be uploaded to the Colab environment. Use the following code snippet to upload your dataset:
+import requests
+import zipfile
+import io
 
-```python
-from google.colab import files
-uploaded = files.upload()
-```
+# Download the dataset
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip"
+response = requests.get(url)
+
+# Extract the dataset
+with zipfile.ZipFile(io.BytesIO(response.content)) as z:
+    z.extractall("./data")
+
+print("Dataset downloaded and extracted successfully.")
 
 ### Running the 
 
